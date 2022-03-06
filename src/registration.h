@@ -106,16 +106,16 @@ void displayTable(int* studentID, int numberOfStudents, int numberOfCourses, cha
 			if(courseCounter >= 1) {
 				printf("\t\t\t  \t\t %s", courseCode[courseCounter]);
 				if(table[counter][courseCounter] == 1) {
-                	printf("Registered\n");
+                	printf("\t      Registered\n");
             	} else if(table[counter][courseCounter] == 0) {
-                	printf("Not Registered\n");  
+                	printf("\t  Not Registered\n");  
             	}
 			} else {
 				printf("\t\t %s", courseCode[courseCounter]);
             	if(table[counter][courseCounter] == 1) {
-                	printf("Registered\n");
+                	printf("\t      Registered\n");
             	} else if(table[counter][courseCounter] == 0) {
-                	printf("Not Registered\n");  
+                	printf("\t  Not Registered\n");  
             	} 
 			}
         }

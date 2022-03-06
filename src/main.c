@@ -52,9 +52,10 @@ int main() {
 
 		// Clear standard input (stdin) for next input
 		int c = getchar(); 
-        while(c!='\n' && c!=EOF) {//clearing input buffer through new line character and End Of File macro
+        while(c != '\n' && c != EOF) {//clearing input buffer through new line character and End Of File macro
             c = getchar();
         } 
+		
 		printf("Enter code for course %d: ", (i + 1));
 		courseCode[i] = malloc(8 * sizeof(char));
 		fgets(courseCode[i], 8, stdin);
