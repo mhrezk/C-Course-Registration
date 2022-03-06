@@ -25,11 +25,11 @@ int main() {
 
 	//Number of Students
 	studentID = (int*) malloc(numberOfStudents * sizeof(int));
-	sameElements(studentID);
+	sameStudents(studentID);
 	for(int i = 0; i < numberOfStudents; i++) {
 		printf("Enter ID for student %d: ", (i+1));
 		scanf("%d", &studentID[i]);
-		while(sameElements(studentID) == 1) {
+		while(sameStudents(studentID) == 1) {
 			printf("Duplicate ID!\n");
 			printf("Enter ID for student %d: ", (i+1));
 			scanf("%d", &studentID[i]);
@@ -58,11 +58,6 @@ int main() {
 		printf("Enter code for course %d: ", (i + 1));
 		courseCode[i] = malloc(8 * sizeof(char));
 		fgets(courseCode[i], 8, stdin);
-		while(sameElements(courseCode) == 1) {
-			printf("Duplicate Course Code!\n");
-			printf("Enter code for course %d: ", (i+1));
-			scanf("%d", &studentID[i]);
-		}
 	}
 
 	//Registration table

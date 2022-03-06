@@ -106,16 +106,16 @@ void displayTable(int* studentID, int numberOfStudents, int numberOfCourses, cha
 			if(courseCounter >= 1) {
 				printf("\t\t\t  \t\t %s", courseCode[courseCounter]);
 				if(table[counter][courseCounter] == 1) {
-                	printf("\t\tRegistered\n");
+                	printf("Registered\n");
             	} else if(table[counter][courseCounter] == 0) {
-                	printf("\t\tNot Registered\n");  
+                	printf("Not Registered\n");  
             	}
 			} else {
 				printf("\t\t %s", courseCode[courseCounter]);
             	if(table[counter][courseCounter] == 1) {
-                	printf("\t\tRegistered\n");
+                	printf("Registered\n");
             	} else if(table[counter][courseCounter] == 0) {
-                	printf("\t\tNot Registered\n");  
+                	printf("Not Registered\n");  
             	} 
 			}
         }
@@ -130,7 +130,7 @@ void freeMemory(int* studentID, char** courseCode, int** table) {
 	free(table);
 }
 
-int sameElements(int array[]) {
+int sameStudents(int array[]) {
 	int first = array[0];
 	int arraySize = sizeof(array) / sizeof(array[0]);
 
