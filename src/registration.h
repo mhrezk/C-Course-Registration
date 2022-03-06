@@ -98,12 +98,28 @@ void dropCourse(int* studentID, int numberOfStudents, int numberOfCourses, char*
 
 //Display registration table
 void displayTable(int* studentID, int numberOfStudents, int numberOfCourses, char** courseCode, int** table) {
-	for(int i = 0; i < numberOfStudents; i++) {
-		printf("\nStudent ID: %d", studentID[i]);
-		for(int j = 0; j < numberOfCourses; j++) {
-			printf("\tCourses %s: [%d]", courseCode[j], table[i][j]);
-		}
-	}
+	printf("\t\t\t\tRegistration Table\n");
+    printf("Registration Index \tStudent ID \tCourse ID \tRegistration Status\n");
+    for(int counter = 0; counter < numberOfStudents; counter++) {
+        printf("\t%d\t\t  %d", counter + 1, studentID[counter]);
+        for(int courseCounter = 0; courseCounter < numberOfCourses; courseCounter++) {
+			if(courseCounter >= 1) {
+				printf("\t\t\t  \t\t %s", courseCode[courseCounter]);
+				if(table[counter][courseCounter] == 1) {
+                	printf("\t\tRegistered\n");
+            	} else if(table[counter][courseCounter] == 0) {
+                	printf("\t\tNot Registered\n");  
+            	}
+			} else {
+				printf("\t\t %s", courseCode[courseCounter]);
+            	if(table[counter][courseCounter] == 1) {
+                	printf("\t\tRegistered\n");
+            	} else if(table[counter][courseCounter] == 0) {
+                	printf("\t\tNot Registered\n");  
+            	} 
+			}
+        }
+	}	
 	printf("\n");
 }
 
