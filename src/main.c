@@ -59,6 +59,28 @@ int main() {
 		printf("Enter code for course %d: ", (i + 1));
 		courseCode[i] = malloc(8 * sizeof(char));
 		fgets(courseCode[i], 8, stdin);
+		
+		if(i >= 1 && strcmp(courseCode[0], courseCode[i]) == 0) {
+			int isSame = 1;
+			while(isSame == 1) {
+				printf("Duplicate Code!\n");
+				printf("Enter code for course %d: ", (i + 1));
+				courseCode[i] = malloc(8 * sizeof(char));
+				fgets(courseCode[i], 8, stdin);
+				if(strcmp(courseCode[0], fgets(courseCode[i], 8, stdin)) != 0) {
+					isSame = 0;
+				}
+			}
+		}
+		
+		// int wordSize = sizeof(courseCode[0])/sizeof(courseCode[0][0]);
+		// for(int j = 0; j < wordSize; j++) {
+		// 	while (sameCourses(courseCode) == 0) {
+		// 		printf("Duplicate Code!\n");
+		// 		printf("Enter code for course %d: ", (i+1));
+		// 		fgets(courseCode[i], 8, stdin);
+		// 	}
+		// }
 	}
 
 	//Registration table

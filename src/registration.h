@@ -130,15 +130,15 @@ void freeMemory(int* studentID, char** courseCode, int** table) {
 	free(table);
 }
 
-int sameStudents(int array[]) {
+int sameStudents(int* array) {
 	int first = array[0];
 	int arraySize = sizeof(array) / sizeof(array[0]);
 
-       for (int i = 1; i < arraySize; i++) {
-		   if (array[i] != first)
-                return 0;
-	   }
-       return 1;
+    for (int i = 1; i < arraySize; i++) {
+		if (array[i] != first)
+            return 0;
+	}
+    return 1;
 }
 
 #define REGISTRATION
