@@ -2,6 +2,12 @@
 
 Repository: [C Course Registration](https://github.com/mhrezk/C-Course-Registration)
 
+## 1.3.0 (06-03-2022)
+
+### Added
+
+* Added `Makefile`
+
 ## 1.2.0 (06-03-2022)
 
 ### Added

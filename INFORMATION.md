@@ -8,6 +8,7 @@ A repository designed, in C, to simulate a system within a registrar's office. T
 
 - [x] `registration.h`: Header file containing guard and method definitions
 - [x] `main.c`: Program execution through main function
+- [x] `Makefile`: File for make command
 
 ## Usage
 
